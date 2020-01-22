@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Poiret+One&display=swap&subset=cyrillic" rel="stylesheet">
+    <title>Veles</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Новости культуры</h1>
+      <nav class="navbar">
+        <button class="navbar__btn-open"><div></div></button>
+        <ul class="navbar__list navbar__list--active">
+          <button class="navbar__btn-close"></button>
+          <li class="navbar__item">
+            <a class="navbar__link" href="">Новости</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="">Обзоры</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="">Архитектура</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="">Кино</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="">Театр</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="">Литература</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="">Живопись</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Подключить карусель -->
+      <section class="intro">
+        <a class="button intro__button">Новое</a>
+        <div class="intro__slider">
+          <div class="slider-item slider-item--hotel">
+            <a href=""><h2 class="intro__title">Подводный отель</h2></a>
+            <p class="intro__text">
+              Как известно, Дубай – город контрастов. Самые революционные и
+              фантастические мечты архитекторов способен воплотить в жизнь этот
+              мегаполис, построенный на нефти и за счет нефти
+            </p>
+          </div>
+          <div class="slider-item slider-item--fountain">
+            <a href=""><h2 class="intro__title">Поющие фонтаны</h2></a>
+            <p class="intro__text">
+              Как известно, Дубай – город контрастов. Самые революционные и
+              фантастические мечты архитекторов способен воплотить в жизнь этот
+              мегаполис, построенный на нефти и за счет нефти
+            </p>
+          </div>
+          <div class="slider-item slider-item--mall">
+            <a href=""><h2 class="intro__title">Дубай молл</h2></a>
+            <p class="intro__text">
+              The Dubai Mall — самый крупный торгово-развлекательный центр в
+              мире, расположенный в даунтауне Дубай. Общая площадь центра
+              составляет более 1,2 млн м².
+            </p>
+          </div>
+        </div>
+        <div class="arrow arrow__prev">
+          <button class="prev__btn">Предыдущая</button>
+          <svg width="42" height="42" viewBox="0 0 35 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.707088 19.8578L9.25223 11.3915L9.21627 19.1501L9.17339 28.4029L0.707088 19.8578Z" stroke="white"></path>
+          </svg>
+        </div>
+        <div class="arrow arrow__next">
+          <button class="next__btn">Следующая</button>
+          <svg width="42" height="42" viewBox="0 0 35 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M38.1549 19.8578L29.6098 11.3915L29.6457 19.1501L29.6886 28.4029L38.1549 19.8578Z" stroke="white"></path>
+          </svg>
+        </div>
+      </section>
+    </header>
+    <main class="main-page">
+      <article class="news wrapper">
+        <h2 class="article__title">Новости</h2>
+        <ul class="news__list">
+          <li class="news__item">
+            <div class="news__img article__img">
+              <a href=""><img class="" src="/img/news/main-mob.jpg"></a>
+            </div>
+            <div class="news__content">
+              <a href="">
+                <h3 class="news__content__title">
+                  Новости культуры России и всего мира
+                </h3>
+              </a>
+              <p class="">
+                В минувшие выходные в Москве на фестивале «Оберег» вручили
+                первую премию Russian World Music Awards
+              </p>
+            </div>
+          </li>
+          <li class="news__item">
+            <div class="news__img article__img">
+              <a href=""><img class="" src="/img/news/item01.jpg"></a>
+            </div>
+            <div class="news__content">
+              <a href="">
+                <h3 class="news__content__title">
+                  Открытие нового памятника Евгению Леонову
+                </h3>
+              </a>
+              <p class="">
+                10 сентября в 15:00 был открыт памятник писателю
+              </p>
+            </div>
+          </li>
+          <li class="news__item">
+            <div class="news__img article__img">
+              <a href=""><img class="" src="/img/news/item02.jpg"></a>
+            </div>
+            <div class="news__content">
+              <a href=""><h3 class="news__content__title">Беседы с писателями</h3></a>
+              <p class="">
+                Русские писатели говорят о важности искусства
+              </p>
+            </div>
+          </li>
+          <li class="news__item">
+            <div class="news__img article__img">
+              <a href=""><img class="" src="/img/news/item03.jpg"></a>
+            </div>
+            <div class="news__content">
+              <a href="">
+                <h3 class="news__content__title">
+                  День и ночь св. Патрика: встреча старых друзей
+                </h3>
+              </a>
+              <p class="">
+                Не Джойсом единым живет Ирландия!
+              </p>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <article class="article reviews wrapper">
+        <h2 class="article__title">Обзоры</h2>
+        <ul class="reviews__list"></ul>
+        <div id="pagination"></div>
+      </article>
+      <section class="exhibition exhibition--ballet">
+        <h2 class="exhibition__title exhibition__title--ballet">
+          Ох, уж этот балет
+        </h2>
+        <button class="exhibition__btn">Смотреть</button>
+      </section>
+      <section class="additional">
+        <div class="additional__slider">
+          <div class="slider-item additional__content">
+            <img src="/img/exhibitions/carousel/item01.jpg">
+            <div class="additional__text">
+              <a href=""><h2 class="additional__title">Как все успевать</h2></a>
+              <button class="additional__btn">Смотреть</button>
+            </div>
+          </div>
+          <div class="slider-item additional__content">
+            <img src="/img/exhibitions/carousel/item02.jpg">
+            <div class="additional__text">
+              <a href=""><h2 class="additional__title">
+                  Лучшие места для путешествий
+                </h2></a>
+              <button class="additional__btn">Смотреть</button>
+            </div>
+          </div>
+          <div class="slider-item additional__content">
+            <img src="/img/exhibitions/carousel/item03.jpg">
+            <div class="additional__text">
+              <a href=""><h2 class="additional__title">Чем заняться в выходные</h2></a>
+              <button class="additional__btn">Смотреть</button>
+            </div>
+          </div>
+          <div class="slider-item additional__content">
+            <img src="/img/exhibitions/carousel/item04.jpg">
+            <div class="additional__text">
+              <a href=""><h2 class="additional__title">Игры стратегии</h2></a>
+              <button class="additional__btn">Смотреть</button>
+            </div>
+          </div>
+          <div class="slider-item additional__content">
+            <img src="/img/exhibitions/carousel/item01.jpg">
+            <div class="additional__text">
+              <a href=""><h2 class="additional__title">Как все успевать</h2></a>
+              <button class="additional__btn">Смотреть</button>
+            </div>
+          </div>
+          <div class="slider-item additional__content">
+            <img src="/img/exhibitions/carousel/item01.jpg">
+            <div class="additional__text">
+              <a href=""><h2 class="additional__title">Как все успевать</h2></a>
+              <button class="additional__btn">Смотреть</button>
+            </div>
+          </div>
+          <div class="slider-item additional__content">
+            <img src="/img/exhibitions/carousel/item01.jpg">
+            <div class="additional__text">
+              <a href=""><h2 class="additional__title">Как все успевать</h2></a>
+              <button class="additional__btn">Смотреть</button>
+            </div>
+          </div>
+          <div class="slider-item additional__content">
+            <img src="/img/exhibitions/carousel/item01.jpg">
+            <div class="additional__text">
+              <a href=""><h2 class="additional__title">Как все успевать</h2></a>
+              <button class="additional__btn">Смотреть</button>
+            </div>
+          </div>
+        </div>
+        <div class="additional__prev"></div>
+        <div class="additional__next"></div>
+      </section>
+
+      <article class="exhibition__wrapper">
+        <section class="exhibition exhibition--balloons">
+          <h2 class="exhibition__title exhibition__title--balloons">
+            Воздушные шары
+          </h2>
+          <button class="exhibition__btn">Смотреть</button>
+        </section>
+        <section class="exhibition exhibition--photo">
+          <h2 class="exhibition__title ">
+            Необычная фотосессия
+          </h2>
+          <button class="exhibition__btn">Смотреть</button>
+        </section>
+        <section class="exhibition exhibition--birds">
+          <h2 class="exhibition__title">
+            Выставка птиц
+          </h2>
+          <button class="exhibition__btn">Смотреть</button>
+        </section>
+      </article>
+    </main>
+    <footer class="footer">
+      <h2 class="footer__title">Новости культуры</h2>
+      <ul class="navbar__list footer__list">
+        <li class="navbar__item">
+          <a class="navbar__link" href="">Новости</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="">Обзоры</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="">Архитектура</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="">Кино</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="">Театр</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="">Литература</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="">Живопись</a>
+        </li>
+      </ul>
+      <p class="footer__copyright">
+        © 2018 Новости культуры. Все права защищены.
+      </p>
+    </footer>
+    <script src="js/libs.min.js"></script>
+    <script src="js/all.js"></script>
+  </body>
+</html>

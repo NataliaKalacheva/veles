@@ -1,0 +1,33 @@
+.slick-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  @include reset-list;
+}
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+  text-indent: -9999px;
+  border: none;
+  border-radius: 50%;
+  background: $white;
+  opacity: 0.3;
+}
+.slick-dots li {
+  display: inline-block;
+}
+.slick-current {
+  opacity: 1;
+}
+.slick-dots .slick-active button {
+  opacity: 1;
+}
+
+@media (min-width: $tablet) {
+  .slick-dots {
+    display: none !important;
+  }
+}

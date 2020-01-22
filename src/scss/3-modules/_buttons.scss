@@ -1,0 +1,27 @@
+@mixin basic-btn($bg, $text, $width) {
+  display: block;
+  margin: 0 auto;
+  max-width: $width;
+  padding: 4px 14px;
+
+  font: inherit;
+  color: $text;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: none;
+  box-sizing: border-box;
+  background: $bg;
+  cursor: pointer;
+  transition: 0.3s linear;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.button {
+  @include basic-btn($accent, $white, 81px);
+  font-size: 16px;
+  line-height: 19px;
+}

@@ -1,0 +1,41 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-btn {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+@mixin reset-link {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+@mixin usual-font {
+  font-family: "Poiret One", cursive;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 150%;
+}
+
+@mixin headers-font {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 150%;
+}
+
+@mixin strip($color, $width, $height) {
+  width: $width;
+  height: $height;
+  background: $color;
+}

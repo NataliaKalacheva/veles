@@ -1,0 +1,40 @@
+.reviews__list {
+  @include reset-list;
+}
+
+.reviews__item {
+  width: 100%;
+}
+.reviews__img {
+  width: 100%;
+}
+
+.reviews__content__title {
+  margin: 15px 0;
+  font-size: 23px;
+}
+
+.reviews__content {
+  width: 100%;
+  font-size: 14px;
+  a {
+    @include reset-link;
+  }
+}
+
+@media (min-width: $tablet) {
+  .reviews__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .reviews__item {
+    width: 48%;
+  }
+}
+
+@media (min-width: $desktop) {
+  .reviews__item {
+    width: 371px;
+  }
+}

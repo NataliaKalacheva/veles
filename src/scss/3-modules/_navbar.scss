@@ -1,0 +1,184 @@
+$link-bg: #f9f9fc;
+$link-text: #48494d;
+
+.navbar__btn-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+
+  @include reset-btn;
+  background: $accent;
+}
+
+.navbar__btn-open div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+
+  transform: translate(-50%, -50%);
+
+  @include strip($white, 30px, 2px);
+
+  &:after,
+  &::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+
+    transform: translateX(50%);
+
+    @include strip($white, 30px, 2px);
+  }
+
+  &::after {
+    top: 10px;
+  }
+  &::before {
+    bottom: 10px;
+  }
+}
+
+.navbar__btn-close {
+  display: none;
+  position: relative;
+  margin: 15px 15px 30px auto;
+  @include reset-btn;
+  width: 30px;
+  height: 30px;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    @include strip(rgba($black, 0.2), 2px, 35px);
+  }
+  &:after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.navbar__btn-close--active {
+  display: block;
+  &:hover {
+    animation: rotate 0.2s ease-in-out;
+  }
+}
+
+.navbar__list {
+  display: none;
+  @include reset-list;
+}
+
+.navbar__list--active {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+
+  z-index: 100;
+  background: $white;
+  animation: show 0.4s linear;
+}
+
+.navbar__item {
+  text-transform: uppercase;
+}
+
+.navbar__link {
+  position: relative;
+  display: block;
+
+  margin-bottom: 20px;
+  padding: 18px 16px;
+  text-decoration: none;
+
+  font-size: 15px;
+  line-height: 18px;
+  color: $link-text;
+  background: $link-bg;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 16px;
+
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+
+    border-top: 1px solid rgba($black, 0.2);
+    border-right: 1px solid rgba($black, 0.2);
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+@media (min-width: $mobile) {
+}
+@media (min-width: $tablet) {
+}
+@media (min-width: $desktop) {
+  .navbar__list {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 0;
+  }
+
+  .navbar__link {
+    padding: 46px 0px 26px;
+    margin-right: 50px;
+    color: $black;
+    font-size: 15px;
+    background: transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .navbar__btn-close--active {
+    display: none;
+  }
+  .navbar__btn-open,
+  .navbar__btn-close {
+    display: none;
+  }
+
+  .navbar__list--active {
+    position: static;
+  }
+}
+
+@keyframes show {
+  0% {
+    top: -500px;
+    opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0.3) rotate(0);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}

@@ -1,0 +1,50 @@
+body {
+  padding: 0;
+  @include usual-font;
+
+  margin: 0 auto;
+}
+
+main {
+  position: relative;
+}
+header,
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @include headers-font;
+}
+
+h1 {
+  font-size: 25px;
+  line-height: 33px;
+  color: $black;
+}
+
+a {
+  font-family: inherit;
+  color: $black;
+  transition: 0.3s opacity linear;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: $mobile) {
+}
+@media (min-width: $tablet) {
+}
+@media (min-width: $desktop) {
+  h1 {
+    font-size: 35px;
+    line-height: 47px;
+    color: $black;
+  }
+}

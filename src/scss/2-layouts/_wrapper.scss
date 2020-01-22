@@ -1,0 +1,10 @@
+.wrapper {
+  padding: 50px 16px 0;
+}
+
+@media (min-width: $desktop) {
+  .wrapper {
+    width: 770px;
+    padding: 50px 0 0;
+  }
+}
