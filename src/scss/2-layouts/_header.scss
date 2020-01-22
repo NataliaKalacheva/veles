@@ -8,15 +8,15 @@
     padding: 30px;
     width: 150px;
   }
-
 }
 @media (min-width: $tablet) {
   .header__title {
-    padding: 60px 0 0px;
+    padding: 60px 0 30px;
     width: 100%;
   }
-
 }
 @media (min-width: $desktop) {
-
+  .header__title {
+    padding: 60px 0 0px;
+  }
 }
