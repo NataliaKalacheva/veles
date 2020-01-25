@@ -14,7 +14,6 @@ const browserSync = require("browser-sync").create();
 const imagemin = require("gulp-imagemin");
 const babel = require("gulp-babel");
 
-
 gulp.task("sass-compile", function() {
   return (
     gulp
@@ -53,20 +52,25 @@ gulp.task("html", function() {
 });
 
 gulp.task("scripts:lib", function() {
-  return gulp
-    .src(["node_modules/jquery/dist/jquery.min.js", "node_modules/slick-carousel/slick/slick.min.js"])
-    // .src(["./src/js/**/*.js"])
-    // .pipe(sourcemaps.init())
-    // .pipe(
-    //   babel({
-    //     presets: ["@babel/env"]
-    //   })
-    // )
-    // .pipe(concat("all.js"))
-    .pipe(concat("libs.min.js"))
-    // .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./build/js/"))
-    .pipe(browserSync.stream());
+  return (
+    gulp
+      .src([
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/slick-carousel/slick/slick.min.js"
+      ])
+      // .src(["./src/js/**/*.js"])
+      // .pipe(sourcemaps.init())
+      // .pipe(
+      //   babel({
+      //     presets: ["@babel/env"]
+      //   })
+      // )
+      // .pipe(concat("all.js"))
+      .pipe(concat("libs.min.js"))
+      // .pipe(sourcemaps.write("."))
+      .pipe(gulp.dest("./build/js/"))
+      .pipe(browserSync.stream())
+  );
 });
 
 gulp.task("scripts", function() {
@@ -85,10 +89,12 @@ gulp.task("scripts", function() {
 });
 
 gulp.task("images", function() {
-  return gulp
-    .src("./src/img/**/*")
-    .pipe(imagemin())
-    .pipe(gulp.dest("./build/img"));
+  return (
+    gulp
+      .src("./src/img/**/*")
+      // .pipe(imagemin())
+      .pipe(gulp.dest("./build/img"))
+  );
 });
 
 gulp.task("watch", function() {
@@ -109,14 +115,26 @@ gulp.task("del", function() {
 
 gulp.task(
   "build",
-  gulp.series("del", gulp.parallel("html", "sass-compile", "scripts", "images"))
+  gulp.series(
+    "del",
+    gulp.parallel("html", "sass-compile", "scripts:lib", "scripts", "images")
+  )
 );
 
-gulp.task('jquery', function () {
-  return gulp.src('./node_modules/jquery/src')
-      .pipe(jquery({
-          flags: ['-deprecated', '-event/alias', '-ajax/script', '-ajax/jsonp', '-exports/global']
-      }))
-      .pipe(gulp.dest('./public/vendor/'));
+gulp.task("jquery", function() {
+  return gulp
+    .src("./node_modules/jquery/src")
+    .pipe(
+      jquery({
+        flags: [
+          "-deprecated",
+          "-event/alias",
+          "-ajax/script",
+          "-ajax/jsonp",
+          "-exports/global"
+        ]
+      })
+    )
+    .pipe(gulp.dest("./public/vendor/"));
   // creates ./public/vendor/jquery.custom.js
 });

@@ -9,15 +9,13 @@
 
 .article__img {
   position: relative;
-  width: 44.1%;
-
+  overflow: hidden;
   img {
     display: block;
     position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   &:hover:after {
@@ -41,6 +39,6 @@
 
     width: 30px;
     height: 30px;
-    background: url(/img/icons/flag.svg) no-repeat center;
+    background: url(../img/icons/flag.svg) no-repeat center;
   }
 }

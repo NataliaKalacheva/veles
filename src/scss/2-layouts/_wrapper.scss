@@ -1,7 +1,14 @@
 .wrapper {
+  width: 320px;
+  margin: 0 auto;
   padding: 50px 16px 0;
+  box-sizing: border-box;
 }
-
+@media (min-width: $tablet) {
+  .wrapper {
+    width: 100%;
+  }
+}
 @media (min-width: $desktop) {
   .wrapper {
     width: 770px;

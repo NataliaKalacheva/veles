@@ -42,7 +42,7 @@
 
     width: 25px;
     height: 24px;
-    background-image: url(/img/icons/arrow.svg);
+    background-image: url(../img/icons/arrow.svg);
 
     transform: translateY(-50%);
   }
@@ -62,7 +62,7 @@
   width: 100%;
   height: 176px;
 
-  background: url(/img/exhibitions/ballet.jpg) no-repeat top;
+  background: url(../img/exhibitions/ballet.jpg) no-repeat top;
   background-size: 100%;
   .exhibition__btn {
     margin: 40px;
@@ -76,7 +76,7 @@
 
 .exhibition--balloons {
   background: $white;
-  background: url(/img/exhibitions/balloons.jpg) no-repeat center;
+  background: url(../img/exhibitions/balloons.jpg) no-repeat center;
   .exhibition__btn {
     background: $accent;
   }
@@ -86,11 +86,11 @@
 }
 
 .exhibition--photo {
-  background: url(/img/exhibitions/photo.jpg) no-repeat center 30%;
+  background: url(../img/exhibitions/photo.jpg) no-repeat center 30%;
 }
 
 .exhibition--birds {
-  background: url(/img/exhibitions/birds.jpg) no-repeat center 30%;
+  background: url(../img/exhibitions/birds.jpg) no-repeat center 30%;
 }
 
 @media (min-width: $tablet) {
@@ -111,6 +111,6 @@
     margin: 80px 0;
     width: 770px;
     height: 176px;
-    background-image: url(/img/exhibitions/ballet-desktop.jpg);
+    background-image: url(../img/exhibitions/ballet-desktop.jpg);
   }
 }

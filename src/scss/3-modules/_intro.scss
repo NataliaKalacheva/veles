@@ -21,14 +21,14 @@
 }
 
 .slider-item--hotel {
-  background-image: url(/img/intro/big-01.jpg);
+  background-image: url(../img/intro/big-01.jpg);
 }
 
 .slider-item--fountain {
-  background-image: url(/img/intro/big-02.jpg);
+  background-image: url(../img/intro/big-02.jpg);
 }
 .slider-item--mall {
-  background-image: url(/img/intro/big-03.jpg);
+  background-image: url(../img/intro/big-03.jpg);
 }
 
 .intro__title {
@@ -63,11 +63,6 @@
   cursor: pointer;
 }
 
-.arrow__prev {
-  left: 45%;
-  transform: translateX(-45%);
-}
-
 .prev__btn,
 .next__btn {
   display: none;
@@ -100,9 +95,12 @@
   right: -300px;
 }
 .arrow__next {
-  left: 55%;
-  transform: translateX(-55%);
+  right: 100px;
 }
+.arrow__prev {
+  left: 100px;
+}
+
 .arrow svg {
   display: none;
 }
@@ -135,5 +133,12 @@
   .prev__btn,
   .next__btn {
     display: block;
+  }
+
+  .arrow__prev {
+    left: 45%;
+  }
+  .arrow__next {
+    right: 45%;
   }
 }
