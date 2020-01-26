@@ -2,8 +2,18 @@
   @include reset-list;
 }
 
+@keyframes showlist {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .reviews__item {
   width: 100%;
+  animation: showlist 0.3s linear;
 }
 .reviews__img {
   width: 100%;
@@ -24,12 +34,9 @@
 
 @media (min-width: $tablet) {
   .reviews__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .reviews__item {
-    width: 48%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
   }
 }
 

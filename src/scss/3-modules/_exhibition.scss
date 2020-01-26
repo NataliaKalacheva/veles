@@ -94,12 +94,18 @@
 }
 
 @media (min-width: $tablet) {
+  .exhibition__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 @media (min-width: $desktop) {
   .exhibition__wrapper {
     position: absolute;
-    right: 0px;
+    display: block;
+    right: 10px;
     top: 7px;
     margin-top: 0;
   }

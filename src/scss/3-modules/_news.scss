@@ -4,15 +4,12 @@
 
 .news__item {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
   margin-bottom: 30px;
-
-  overflow: hidden;
 
   a {
     @include reset-link;
@@ -30,6 +27,8 @@
 
   font-size: 10px;
   line-height: 120%;
+
+  overflow: auto;
 }
 
 .news__content__title {
@@ -56,12 +55,16 @@
     font-size: 20px;
     line-height: 27px;
   }
+
+  img {
+    height: 100%;
+  }
 }
 
 @media (min-width: $tablet) {
   .news__list {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 91px 91px 91px;
     grid-row-gap: 15px;
     grid-column-gap: 16px;
