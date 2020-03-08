@@ -1,4 +1,4 @@
-# SCSS strusture
+# SCSS structure
 
 ## Plugins
 
